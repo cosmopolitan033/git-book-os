@@ -71,4 +71,13 @@
     * [Journaling File Systems](readings/lec15/file-journaling.md)
     * [Log-structured File Systems](readings/lec15/file-lfs.md)
     * [Solid State Drives and File Systems](readings/lec15/file-ssd.md)
+* [Lecture 16: Virtual Machine Monitors](readings/lec16/README.md)
+    * [Dialogue on VMM](readings/lec16/dialogue-vmm.md)
+    * [Introduction to VMM](readings/lec16/vmm-intro.md)
+* [Lecture 17: Security](readings/lec17/README.md)
+    * [Dialogue on Security](readings/lec17/dialogue-security.md)
+    * [Access Security](readings/lec17/security-access.md)
+    * [Authentication](readings/lec17/security-authentication.md)
+    * [Cryptography](readings/lec17/security-crypto.md)
+    * [Introduction to Security](readings/lec17/security-intro.md)
 
