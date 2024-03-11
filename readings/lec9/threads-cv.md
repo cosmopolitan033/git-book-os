@@ -1,2 +1,0 @@
-# Threads with Condition Variables
-
