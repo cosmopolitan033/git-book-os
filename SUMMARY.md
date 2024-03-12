@@ -73,4 +73,12 @@
     * [Authentication](readings/lec17/security-authentication.md)
     * [Cryptography](readings/lec17/security-crypto.md)
     * [Introduction to Security](readings/lec17/security-intro.md)
+* [Lecture 18: Distributed Systems](readings/lec18/README.md)
+    * [Distributed Systems: Goals and Challenges](readings/lec18/Distributed_Systems-Goals_and_Challenges.md)
+    * [Leases](readings/lec18/Leases.md)
+    * [Introduction to Distributed Systems](readings/lec18/dist-intro.md)
+    * [Security in Distributed Systems](readings/lec18/security-distributed.md)
+* [Lecture 19: Distributed File Systems](readings/lec19/README.md)
+    * [The Andrew File System (AFS)](readings/lec19/dist-afs.md)
+    * [Network File System (NFS)](readings/lec19/dist-nfs.md)
 
