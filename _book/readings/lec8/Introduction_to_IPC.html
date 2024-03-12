@@ -129,20 +129,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../lec1/dialogue-threeeasy.html">
-            
-                <a href="../lec1/dialogue-threeeasy.html">
-            
-                    
-                    Dialogue on Three Easy Pieces
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.3" data-path="../lec1/intro.html">
+        <li class="chapter " data-level="1.2.2" data-path="../lec1/intro.html">
             
                 <a href="../lec1/intro.html">
             
@@ -316,19 +303,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../lec4/dialogue-virtualization.html">
-            
-                <a href="../lec4/dialogue-virtualization.html">
-            
-                    
-                    Dialogue on Virtualization
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -406,20 +380,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../lec6/dialogue-vm.html">
-            
-                <a href="../lec6/dialogue-vm.html">
-            
-                    
-                    Dialogue on Virtual Memory
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.3" data-path="../lec6/vm-api.html">
+        <li class="chapter " data-level="1.7.2" data-path="../lec6/vm-api.html">
             
                 <a href="../lec6/vm-api.html">
             
@@ -432,7 +393,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../lec6/vm-freespace.html">
+        <li class="chapter " data-level="1.7.3" data-path="../lec6/vm-freespace.html">
             
                 <a href="../lec6/vm-freespace.html">
             
@@ -445,7 +406,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="../lec6/vm-intro.html">
+        <li class="chapter " data-level="1.7.4" data-path="../lec6/vm-intro.html">
             
                 <a href="../lec6/vm-intro.html">
             
@@ -458,7 +419,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="../lec6/vm-mechanism.html">
+        <li class="chapter " data-level="1.7.5" data-path="../lec6/vm-mechanism.html">
             
                 <a href="../lec6/vm-mechanism.html">
             
@@ -471,7 +432,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.7" data-path="../lec6/vm-segmentation.html">
+        <li class="chapter " data-level="1.7.6" data-path="../lec6/vm-segmentation.html">
             
                 <a href="../lec6/vm-segmentation.html">
             
@@ -613,20 +574,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="dialogue-concurrency.html">
-            
-                <a href="dialogue-concurrency.html">
-            
-                    
-                    Dialogue on Concurrency
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.4" data-path="threads-api.html">
+        <li class="chapter " data-level="1.9.3" data-path="threads-api.html">
             
                 <a href="threads-api.html">
             
@@ -639,7 +587,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.5" data-path="threads-intro.html">
+        <li class="chapter " data-level="1.9.4" data-path="threads-intro.html">
             
                 <a href="threads-intro.html">
             
@@ -697,20 +645,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../lec9/threads-cv.html">
-            
-                <a href="../lec9/threads-cv.html">
-            
-                    
-                    Threads with Condition Variables
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10.4" data-path="../lec9/threads-locks.html">
+        <li class="chapter " data-level="1.10.3" data-path="../lec9/threads-locks.html">
             
                 <a href="../lec9/threads-locks.html">
             
@@ -910,20 +845,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.3" data-path="../lec12/dialogue-persistence.html">
-            
-                <a href="../lec12/dialogue-persistence.html">
-            
-                    
-                    Dialogue on Persistence
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.4" data-path="../lec12/file-devices.html">
+        <li class="chapter " data-level="1.13.3" data-path="../lec12/file-devices.html">
             
                 <a href="../lec12/file-devices.html">
             
@@ -1116,20 +1038,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.17.1" data-path="../lec16/dialogue-vmm.html">
-            
-                <a href="../lec16/dialogue-vmm.html">
-            
-                    
-                    Dialogue on VMM
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.17.2" data-path="../lec16/vmm-intro.html">
+        <li class="chapter " data-level="1.17.1" data-path="../lec16/vmm-intro.html">
             
                 <a href="../lec16/vmm-intro.html">
             
@@ -1277,6 +1186,124 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="introduction-to-ipc">Introduction to IPC</h1>
+<p>Inter-Process Communication</p>
+<h2 id="introduction">Introduction</h2>
+<p>We can divide process interactions into a two broad categories:</p>
+<ol>
+<li>the coordination of operations with other processes:<ul>
+<li>synchronization (e.g. mutexes and condition variables)</li>
+<li>the exchange of signals (e.g. <em>kill(2)</em>)</li>
+<li>control operations (e.g. <em>fork(2)</em>, <em>wait(2)</em>, <em>ptrace(2)</em>)</li>
+</ul>
+</li>
+<li>the exchange of data between processes:<ul>
+<li>uni-directional data processing pipelines</li>
+<li>bi-directional interactions</li>
+</ul>
+</li>
+</ol>
+<p>The first of these are discussed in other readings and lectures. This is an introduction to the exchange of data between processes.</p>
+<h2 id="simple-uni-directional-byte-streams">Simple Uni-Directional Byte Streams</h2>
+<p>These are easy to create and trivial to use. A pipe can be opened by a parent and inherited by a child, who simply reads standard input and writes standard output. Such pipelines can be used as part of a standard processing model:</p>
+<pre><code>    macro-processor | compiler | assembler &gt; output
+</code></pre><p>or as custom constructions for one-off tasks:</p>
+<pre><code>    find . -newer $TIMESTAMP | grep -v &apos;*.o&apos; | tar cfz archive.tgz -T -
+</code></pre><p>All such uses have a few key characteristics in common:</p>
+<ul>
+<li>Each program accepts a byte-stream input, and produces a byte-stream output that is a well defined function of the input.</li>
+<li>Each program in the pipeline operates independently, and is unaware that the others exist or what they might do.</li>
+<li>Byte streams are inherently unstructured. If there is any structure to the data they carry (e.g. newline-delimited lines or comma-separated-values) these conventions are implemented by parsers in the affected applications.</li>
+<li>Ensuring that the output of one program is suitable input to the next is the responsibility of the agent who creates the pipeline.</li>
+<li>Similar results could be obtained by writing the output of each program into a (temporary) file, and then using that file as input to the next program.</li>
+</ul>
+<p>Pipes are temporary files with a few special features, that recognize the difference between a file (whose contents are relatively static) and an inter-process data stream:</p>
+<ul>
+<li>If the reader exhausts all of the data in the pipe, but there is still an open write file descriptor, the reader does not get an <em>End of File</em>(EOF). Rather the reader is blocked until more data becomes available, or the write side is closed.</li>
+<li>The available buffering capacity of the pipe may be limited. If the writer gets too far ahead of the reader, the operating system may block the writer until the reader catches up. This is called <em>flow control</em>.</li>
+<li>Writing to a pipe that no longer has an open read file descriptor is illegal, and the writer will be sent an exception signal (SIGPIPE).</li>
+<li>When the read and write file descriptors are both closed, the file is automatically deleted.</li>
+</ul>
+<p>Because a pipeline (in principle) represents a closed system, the only data privacy mechanisms tend to be the protections on the initial input files and final output files. There is generally no authentication or encryption of the data being passed between successive processes in the pipeline.</p>
+<h2 id="named-pipes-and-mailboxes">Named Pipes and Mailboxes</h2>
+<p>A named-pipe (<em>fifo(7)</em>) is a baby-step towards explicit connections. It can be thought of as a persistent pipe, whose reader and writer(s) can open it by name, rather than inheriting it from a <em>pipe(2)</em> system call. A normal pipe is custom-plumbed to interconnect processes started by a single user. A named pipe can be used as a rendezvous point for unrelated processes. Named pipes are almost as simple to use as ordinary pipes, but ...</p>
+<ul>
+<li>Readers and writers have no way of authenticating one-another&apos;s identities.</li>
+<li>Writes from multiple writers may be interspersed, with no indications of which bytes came from whom.</li>
+<li>They do not enable clean fail-overs from a failed reader to its successor.</li>
+<li>All readers and writers must be running on the same node.</li>
+</ul>
+<p>Recognizing these limitations, some operating systems have crated more general inter-process communication mechanisms, often called <em>mailboxes</em>. While implementations differ, common features include:</p>
+<ul>
+<li>Data is not a byte-stream. Rather each write is stored and delivered as a distinct message.</li>
+<li>Each write is accompanied by authenticated identification information about its sender.</li>
+<li>Unprocessed messages remain in the mailbox after the death of a reader and can be retrieved by the next reader.</li>
+</ul>
+<p>But mailboxes still subject to single node/single operating system restrictions, and most distributed applications are now based on general and widely standardized network protocols.</p>
+<h2 id="general-network-connections">General Network Connections</h2>
+<p>Most operating systems now provide a fairly standard set of network communications APIs. The associated Linux APIs are:</p>
+<ul>
+<li><em>socket(2)</em> ... create an inter-process communication end-point with an associated protocol and data model.</li>
+<li><em>bind(2)</em> ... associate a <em>socket</em> with a local network address.</li>
+<li><em>connect(2)</em> ... establish a connection to a remote network address.</li>
+<li><em>listen(2)</em> ... await an incoming connection request.</li>
+<li><em>accept(2)</em> ... accept an incoming connection request.</li>
+<li><em>send(2)</em> ... send a message over a socket.</li>
+<li><em>recv(2)</em> ... receive a message from a socket.</li>
+</ul>
+<p>These APIs directly provide a range of different communications options:</p>
+<ul>
+<li>byte streams over reliable connections (e.g. TCP)</li>
+<li>best effort datagrams (e.g. UDP)</li>
+</ul>
+<p>But they also form a foundation for higher level communication/service models. A few examples include:</p>
+<ul>
+<li>Remote Procedure Calls ... distributed request/response APIs.</li>
+<li>RESTful service models ... layered on top of HTTP GETs and PUTs.</li>
+<li>Publish/Subscribe services ... content based information flow.</li>
+</ul>
+<p>Using more general networking models enables processes to interact with services all over the world, but this adds considerable complexity:</p>
+<ul>
+<li>Ensuring interoperability with software running under different operating systems on computers with different instruction set architectures.</li>
+<li>Dealing with the security issues associated with exchanging data and services with unknown systems over public networks.</li>
+<li>Discovering the addresses of (a constantly changing set of) servers.</li>
+<li>Detecting and recovering from (relatively common) connection and node failures.</li>
+</ul>
+<p>Applications are forced to choose between a simple but strictly local model (pipes) or a general but highly complex model (network communications). But there is yet another issue: performance. Protocol stacks may be many layers deep, and data may be processed and copied many times. Network communication may have limited throughput, and high latencies.</p>
+<h2 id="shared-memory">Shared Memory</h2>
+<p>Sometimes performance is more important than generality.</p>
+<ul>
+<li>The network drivers, MPEG decoders, and video rendering in a set top box are guaranteed to be local. Making these operations more efficient can greatly reduce the required processing power, resulting in a smaller form-factor, reduced heat dissipation, and a lower product cost.</li>
+<li>The network drivers, protocol interpreters, write-back cache, RAID implementation, and back-end drivers in a storage array are guaranteed to be local. Significantly reducing the execution time per write operation is the difference between an industry leader and road-kill.</li>
+</ul>
+<p>High performance for Inter-Process Communication means generally means:</p>
+<ul>
+<li>efficiency ... low cost (instructions, nano-seconds, watts) per byte transferred.</li>
+<li>throughput ... maximum number of bytes (or messages) per second that can be transferred.</li>
+<li>latency ... minimum delay between sender write and receiver read.</li>
+</ul>
+<p>If we want ultra high performance Inter-Process Communication between two local processes, buffering the data through the operating system and/or protocol stacks is not the way to get it. The fastest and most efficient way to move data between processes is through shared memory:</p>
+<ul>
+<li>create a file for communication.</li>
+<li>each process maps that file into its virtual address space.</li>
+<li>the shared segment might be locked-down, so that it is never paged out.</li>
+<li>the communicating processes agree on a set of data structures (e.g. polled lock-free circular buffers) in the shared segment.</li>
+<li>anything written into the shared memory segment will be immediately visible to all of the processes that have it mapped in to their address spaces.</li>
+</ul>
+<p>Once the shared segment has been created and mapped into the participating process&apos; address spaces, the operating system plays no role in the subsequent data exchanges. Moving data in this way is extremely efficient and blindingly fast ... but (like all good things) this performance comes at a price:</p>
+<ul>
+<li>This can only be used between processes on the same memory bus.</li>
+<li>A bug in one of the processes can easily destroy the communications data structures.</li>
+<li>There is no authentication (beyond access control on the shared file) of which data came from which process.</li>
+</ul>
+<h2 id="network-connections-and-out-of-band-signals">Network Connections and Out-of-Band Signals</h2>
+<p>In most cases, event completions can be reported simply by sending a message (announcing the completion) to the waiter. But what if there are megabytes of queued requests, and we want to send a message to abort those queued requests? Data sent down a network connection is FIFO ... and one of the problems with FIFO scheduling is the delays waiting for the processing of earlier but longer messages. Occasionally, we would like to make it possible for an important message to go directly to front of the line.</p>
+<p>If the recipient was local, we might consider sending a signal that could invoke a registered handler, and flush (without processing) all of the buffered data. This works because the signals travel over a different channel than the buffered data. Such communication is often called <em>out-of-band</em>, because it does not travel over the normal data path.</p>
+<p>We can achieve a similar effect with network based services by opening multiple communications channels:</p>
+<ul>
+<li>one heavily used channel for normal requests</li>
+<li>another reserved for out-of-band requests</li>
+</ul>
+<p>The server on the far end periodically polls the out-of-band channel before taking requests from the normal communications channel. This adds a little overhead to the processing, but makes it possible to preempt queued operations. The chosen polling interval represents a trade-off between added overhead (to check for out-of-band messages) and how long we might go (how much wasted work we might do) before noticing an out-of-band message.</p>
 
                                 
                                 </section>
@@ -1320,7 +1347,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction to IPC","level":"1.9.1","depth":2,"next":{"title":"User-Mode Threads","level":"1.9.2","depth":2,"path":"readings/lec8/User-Mode_Threads.md","ref":"readings/lec8/User-Mode_Threads.md","articles":[]},"previous":{"title":"Lecture 8: Concurrency and Threads","level":"1.9","depth":1,"path":"readings/lec8/README.md","ref":"readings/lec8/README.md","articles":[{"title":"Introduction to IPC","level":"1.9.1","depth":2,"path":"readings/lec8/Introduction_to_IPC.md","ref":"readings/lec8/Introduction_to_IPC.md","articles":[]},{"title":"User-Mode Threads","level":"1.9.2","depth":2,"path":"readings/lec8/User-Mode_Threads.md","ref":"readings/lec8/User-Mode_Threads.md","articles":[]},{"title":"Dialogue on Concurrency","level":"1.9.3","depth":2,"path":"readings/lec8/dialogue-concurrency.md","ref":"readings/lec8/dialogue-concurrency.md","articles":[]},{"title":"Threads API","level":"1.9.4","depth":2,"path":"readings/lec8/threads-api.md","ref":"readings/lec8/threads-api.md","articles":[]},{"title":"Threads Introduction","level":"1.9.5","depth":2,"path":"readings/lec8/threads-intro.md","ref":"readings/lec8/threads-intro.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec8/Introduction_to_IPC.md","mtime":"2024-03-04T06:05:41.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-11T16:01:07.572Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction to IPC","level":"1.9.1","depth":2,"next":{"title":"User-Mode Threads","level":"1.9.2","depth":2,"path":"readings/lec8/User-Mode_Threads.md","ref":"readings/lec8/User-Mode_Threads.md","articles":[]},"previous":{"title":"Lecture 8: Concurrency and Threads","level":"1.9","depth":1,"path":"readings/lec8/README.md","ref":"readings/lec8/README.md","articles":[{"title":"Introduction to IPC","level":"1.9.1","depth":2,"path":"readings/lec8/Introduction_to_IPC.md","ref":"readings/lec8/Introduction_to_IPC.md","articles":[]},{"title":"User-Mode Threads","level":"1.9.2","depth":2,"path":"readings/lec8/User-Mode_Threads.md","ref":"readings/lec8/User-Mode_Threads.md","articles":[]},{"title":"Threads API","level":"1.9.3","depth":2,"path":"readings/lec8/threads-api.md","ref":"readings/lec8/threads-api.md","articles":[]},{"title":"Threads Introduction","level":"1.9.4","depth":2,"path":"readings/lec8/threads-intro.md","ref":"readings/lec8/threads-intro.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec8/Introduction_to_IPC.md","mtime":"2024-03-11T18:14:34.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-12T00:45:26.750Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1328,10 +1355,6 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
