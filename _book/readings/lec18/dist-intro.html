@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Lecture 14: The Fast File System · GitBook</title>
+        <title>Introduction to Distributed Systems · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file-ffs.html" />
+    <link rel="next" href="security-distributed.html" />
     
     
-    <link rel="prev" href="../lec13/file-intro.html" />
+    <link rel="prev" href="Leases.html" />
     
 
     </head>
@@ -934,9 +934,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15" data-path="./">
+        <li class="chapter " data-level="1.15" data-path="../lec14/">
             
-                <a href="./">
+                <a href="../lec14/">
             
                     
                     Lecture 14: The Fast File System
@@ -948,9 +948,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="file-ffs.html">
+        <li class="chapter " data-level="1.15.1" data-path="../lec14/file-ffs.html">
             
-                <a href="file-ffs.html">
+                <a href="../lec14/file-ffs.html">
             
                     
                     The Fast File System (FFS)
@@ -1140,9 +1140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../lec18/">
+        <li class="chapter " data-level="1.19" data-path="./">
             
-                <a href="../lec18/">
+                <a href="./">
             
                     
                     Lecture 18: Distributed Systems
@@ -1154,9 +1154,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.19.1" data-path="../lec18/Distributed_Systems-Goals_and_Challenges.html">
+        <li class="chapter " data-level="1.19.1" data-path="Distributed_Systems-Goals_and_Challenges.html">
             
-                <a href="../lec18/Distributed_Systems-Goals_and_Challenges.html">
+                <a href="Distributed_Systems-Goals_and_Challenges.html">
             
                     
                     Distributed Systems: Goals and Challenges
@@ -1167,9 +1167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.2" data-path="../lec18/Leases.html">
+        <li class="chapter " data-level="1.19.2" data-path="Leases.html">
             
-                <a href="../lec18/Leases.html">
+                <a href="Leases.html">
             
                     
                     Leases
@@ -1180,9 +1180,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.3" data-path="../lec18/dist-intro.html">
+        <li class="chapter active" data-level="1.19.3" data-path="dist-intro.html">
             
-                <a href="../lec18/dist-intro.html">
+                <a href="dist-intro.html">
             
                     
                     Introduction to Distributed Systems
@@ -1193,9 +1193,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.4" data-path="../lec18/security-distributed.html">
+        <li class="chapter " data-level="1.19.4" data-path="security-distributed.html">
             
-                <a href="../lec18/security-distributed.html">
+                <a href="security-distributed.html">
             
                     
                     Security in Distributed Systems
@@ -1299,7 +1299,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Lecture 14: The Fast File System</a>
+        <a href="../.." >Introduction to Distributed Systems</a>
     </h1>
 </div>
 
@@ -1314,7 +1314,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lecture-14-the-fast-file-system">Lecture 14: The Fast File System</h1>
+                                <h3 id="distributed-systems-and-their-challenges">Distributed Systems and Their Challenges</h3>
+<ul>
+<li><strong>Keywords:</strong> Distributed systems, failure management, machine cooperation, web services.</li>
+<li><strong>Details:</strong> The document begins with an overview of distributed systems, highlighting how modern web services like Google or Facebook rely on the cooperation of thousands of machines to provide reliable services. The major challenge in distributed systems is handling failures, as components such as machines, disks, and networks are prone to failure.</li>
+</ul>
+<h3 id="communication-in-distributed-systems">Communication in Distributed Systems</h3>
+<ul>
+<li><strong>Keywords:</strong> Communication unreliability, packet loss, system performance, security.</li>
+<li><strong>Details:</strong> It emphasizes that communication is inherently unreliable, with issues such as bit corruption and network congestion leading to packet loss. Building reliable services on top of unreliable networks requires strategies to cope with these challenges. System performance and security are also highlighted as critical considerations.</li>
+</ul>
+<h3 id="communication-basics">Communication Basics</h3>
+<ul>
+<li><strong>Keywords:</strong> Unreliable communication, packet loss, reliable communication layers.</li>
+<li><strong>Details:</strong> The document discusses how basic messaging works in distributed systems and introduces the concept of unreliable communication layers, like UDP, which do not guarantee packet delivery. The need for reliable communication layers atop such networks is discussed, focusing on mechanisms to handle packet loss.</li>
+</ul>
+<h3 id="reliable-communication-layers">Reliable Communication Layers</h3>
+<ul>
+<li><strong>Keywords:</strong> Acknowledgment (ack), timeout, retry, message duplication.</li>
+<li><strong>Details:</strong> Techniques for ensuring reliable communication include using acknowledgments for received messages, setting timeouts for retransmission, and handling potential message duplication. These mechanisms aim to achieve reliable message delivery even in the presence of network unreliability.</li>
+</ul>
+<h3 id="handling-duplicate-messages">Handling Duplicate Messages</h3>
+<ul>
+<li><strong>Keywords:</strong> Sequence counters, duplicate detection, message identification.</li>
+<li><strong>Details:</strong> The document describes using sequence counters as a simple and efficient method for detecting duplicate messages. By assigning unique IDs to messages and tracking these IDs, systems can avoid processing the same message multiple times, ensuring that messages are processed exactly once.</li>
+</ul>
+<h3 id="timeout-value-considerations">Timeout Value Considerations</h3>
+<ul>
+<li><strong>Keywords:</strong> Setting timeouts, performance optimization, adaptive retries.</li>
+<li><strong>Details:</strong> The importance of correctly setting timeout values is discussed, balancing the need to detect packet loss without unnecessary retransmissions. Adaptive retry strategies, such as exponential back-off, are suggested for optimizing communication in the face of network congestion or server overload.</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Keywords:</strong> Distributed system design, failure handling, reliable communication.</li>
+<li><strong>Details:</strong> Summarizes the core aspects of distributed systems, emphasizing the need to build working systems from imperfect components. The document highlights the beauty and value of distributed systems in achieving reliability and efficiency through collective machine cooperation and smart failure management strategies.</li>
+</ul>
 
                                 
                                 </section>
@@ -1342,12 +1376,12 @@
 
             
                 
-                <a href="../lec13/file-intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to File Systems">
+                <a href="Leases.html" class="navigation navigation-prev " aria-label="Previous page: Leases">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="file-ffs.html" class="navigation navigation-next " aria-label="Next page: The Fast File System (FFS)">
+                <a href="security-distributed.html" class="navigation navigation-next " aria-label="Next page: Security in Distributed Systems">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1358,7 +1392,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 14: The Fast File System","level":"1.15","depth":1,"next":{"title":"The Fast File System (FFS)","level":"1.15.1","depth":2,"path":"readings/lec14/file-ffs.md","ref":"readings/lec14/file-ffs.md","articles":[]},"previous":{"title":"Introduction to File Systems","level":"1.14.4","depth":2,"path":"readings/lec13/file-intro.md","ref":"readings/lec13/file-intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec14/README.md","mtime":"2024-03-04T06:05:41.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction to Distributed Systems","level":"1.19.3","depth":2,"next":{"title":"Security in Distributed Systems","level":"1.19.4","depth":2,"path":"readings/lec18/security-distributed.md","ref":"readings/lec18/security-distributed.md","articles":[]},"previous":{"title":"Leases","level":"1.19.2","depth":2,"path":"readings/lec18/Leases.md","ref":"readings/lec18/Leases.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec18/dist-intro.md","mtime":"2024-03-12T12:46:59.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

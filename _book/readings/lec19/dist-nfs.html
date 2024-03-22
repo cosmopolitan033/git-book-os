@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Lecture 14: The Fast File System · GitBook</title>
+        <title>Network File System (NFS) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file-ffs.html" />
+    <link rel="next" href="../ppt.html" />
     
     
-    <link rel="prev" href="../lec13/file-intro.html" />
+    <link rel="prev" href="dist-afs.html" />
     
 
     </head>
@@ -934,9 +934,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15" data-path="./">
+        <li class="chapter " data-level="1.15" data-path="../lec14/">
             
-                <a href="./">
+                <a href="../lec14/">
             
                     
                     Lecture 14: The Fast File System
@@ -948,9 +948,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="file-ffs.html">
+        <li class="chapter " data-level="1.15.1" data-path="../lec14/file-ffs.html">
             
-                <a href="file-ffs.html">
+                <a href="../lec14/file-ffs.html">
             
                     
                     The Fast File System (FFS)
@@ -1211,9 +1211,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20" data-path="../lec19/">
+        <li class="chapter " data-level="1.20" data-path="./">
             
-                <a href="../lec19/">
+                <a href="./">
             
                     
                     Lecture 19: Distributed File Systems
@@ -1225,9 +1225,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.20.1" data-path="../lec19/dist-afs.html">
+        <li class="chapter " data-level="1.20.1" data-path="dist-afs.html">
             
-                <a href="../lec19/dist-afs.html">
+                <a href="dist-afs.html">
             
                     
                     The Andrew File System (AFS)
@@ -1238,9 +1238,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.20.2" data-path="../lec19/dist-nfs.html">
+        <li class="chapter active" data-level="1.20.2" data-path="dist-nfs.html">
             
-                <a href="../lec19/dist-nfs.html">
+                <a href="dist-nfs.html">
             
                     
                     Network File System (NFS)
@@ -1299,7 +1299,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Lecture 14: The Fast File System</a>
+        <a href="../.." >Network File System (NFS)</a>
     </h1>
 </div>
 
@@ -1314,7 +1314,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lecture-14-the-fast-file-system">Lecture 14: The Fast File System</h1>
+                                <h3 id="nfs-and-distributed-file-systems">NFS and Distributed File Systems</h3>
+<ul>
+<li><strong>Keywords:</strong> Distributed file systems, client/server model, data sharing.</li>
+<li><strong>Details:</strong> NFS allows multiple client machines to access data stored on a server&apos;s disks through a well-defined protocol, facilitating easy data sharing across clients and centralized data management.</li>
+</ul>
+<h3 id="building-a-distributed-file-system">Building a Distributed File System</h3>
+<ul>
+<li><strong>Keywords:</strong> Key considerations, protocol design, access transparency.</li>
+<li><strong>Details:</strong> The document outlines critical considerations in building a distributed file system, such as ensuring transparency where clients access remote files as if they were local, and the importance of designing efficient protocols for client-server communication.</li>
+</ul>
+<h3 id="the-nfs-protocol">The NFS Protocol</h3>
+<ul>
+<li><strong>Keywords:</strong> Stateless operations, protocol messages, file handles.</li>
+<li><strong>Details:</strong> NFS employs a stateless protocol where each client operation contains all information needed to complete the request, significantly simplifying crash recovery by allowing the server to quickly restart and resume operations without needing to rebuild state.</li>
+</ul>
+<h3 id="server-crash-recovery">Server Crash Recovery</h3>
+<ul>
+<li><strong>Keywords:</strong> Stateless design, fast recovery, client retries.</li>
+<li><strong>Details:</strong> The stateless nature of NFS enables simple and fast recovery from server crashes. Clients can retry requests without concern for the server&apos;s previous state, facilitating robustness against failures.</li>
+</ul>
+<h3 id="key-to-fast-crash-recovery-statelessness">Key to Fast Crash Recovery: Statelessness</h3>
+<ul>
+<li><strong>Keywords:</strong> No client tracking, protocol requests, crash resilience.</li>
+<li><strong>Details:</strong> NFS achieves fast crash recovery by maintaining a stateless server that doesn&apos;t track client actions. This design decision allows for efficient request handling and straightforward recovery mechanisms after crashes.</li>
+</ul>
+<h3 id="nfsv2-protocol-and-file-handles">NFSv2 Protocol and File Handles</h3>
+<ul>
+<li><strong>Keywords:</strong> NFSv2, simple protocol design, file access, unique identifiers.</li>
+<li><strong>Details:</strong> The document focuses on NFSv2, noting its design centered around simplicity and fast server crash recovery. It introduces file handles as unique identifiers for files and directories, essential for stateless operation and efficient request processing.</li>
+</ul>
+<h3 id="client-side-caching-and-cache-consistency">Client-Side Caching and Cache Consistency</h3>
+<ul>
+<li><strong>Keywords:</strong> Performance, client-side caching, consistency challenges.</li>
+<li><strong>Details:</strong> NFSv2 addresses performance and cache consistency through client-side caching of file data and metadata, implementing strategies like flush-on-close to ensure updates are visible across clients and using attribute caching to minimize server queries.</li>
+</ul>
+<h3 id="performance-improvements-and-challenges">Performance Improvements and Challenges</h3>
+<ul>
+<li><strong>Keywords:</strong> Caching, update visibility, stale cache problem, attribute cache.</li>
+<li><strong>Details:</strong> Despite its benefits, client-side caching introduces challenges like ensuring update visibility and avoiding stale caches. NFSv2 uses mechanisms like attribute caching to address these issues, although it leads to complexities in guaranteeing file version consistency.</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Keywords:</strong> NFSv2, distributed file system, stateless design, cache consistency.</li>
+</ul>
 
                                 
                                 </section>
@@ -1342,12 +1385,12 @@
 
             
                 
-                <a href="../lec13/file-intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to File Systems">
+                <a href="dist-afs.html" class="navigation navigation-prev " aria-label="Previous page: The Andrew File System (AFS)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="file-ffs.html" class="navigation navigation-next " aria-label="Next page: The Fast File System (FFS)">
+                <a href="../ppt.html" class="navigation navigation-next " aria-label="Next page: PPT">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1358,7 +1401,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 14: The Fast File System","level":"1.15","depth":1,"next":{"title":"The Fast File System (FFS)","level":"1.15.1","depth":2,"path":"readings/lec14/file-ffs.md","ref":"readings/lec14/file-ffs.md","articles":[]},"previous":{"title":"Introduction to File Systems","level":"1.14.4","depth":2,"path":"readings/lec13/file-intro.md","ref":"readings/lec13/file-intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec14/README.md","mtime":"2024-03-04T06:05:41.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Network File System (NFS)","level":"1.20.2","depth":2,"next":{"title":"PPT","level":"1.21","depth":1,"path":"readings/ppt.md","ref":"readings/ppt.md","articles":[]},"previous":{"title":"The Andrew File System (AFS)","level":"1.20.1","depth":2,"path":"readings/lec19/dist-afs.md","ref":"readings/lec19/dist-afs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec19/dist-nfs.md","mtime":"2024-03-12T13:04:32.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

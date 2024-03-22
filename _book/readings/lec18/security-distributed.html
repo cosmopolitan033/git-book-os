@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Lecture 14: The Fast File System · GitBook</title>
+        <title>Security in Distributed Systems · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file-ffs.html" />
+    <link rel="next" href="../lec19/" />
     
     
-    <link rel="prev" href="../lec13/file-intro.html" />
+    <link rel="prev" href="dist-intro.html" />
     
 
     </head>
@@ -934,9 +934,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.15" data-path="./">
+        <li class="chapter " data-level="1.15" data-path="../lec14/">
             
-                <a href="./">
+                <a href="../lec14/">
             
                     
                     Lecture 14: The Fast File System
@@ -948,9 +948,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="file-ffs.html">
+        <li class="chapter " data-level="1.15.1" data-path="../lec14/file-ffs.html">
             
-                <a href="file-ffs.html">
+                <a href="../lec14/file-ffs.html">
             
                     
                     The Fast File System (FFS)
@@ -1140,9 +1140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../lec18/">
+        <li class="chapter " data-level="1.19" data-path="./">
             
-                <a href="../lec18/">
+                <a href="./">
             
                     
                     Lecture 18: Distributed Systems
@@ -1154,9 +1154,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.19.1" data-path="../lec18/Distributed_Systems-Goals_and_Challenges.html">
+        <li class="chapter " data-level="1.19.1" data-path="Distributed_Systems-Goals_and_Challenges.html">
             
-                <a href="../lec18/Distributed_Systems-Goals_and_Challenges.html">
+                <a href="Distributed_Systems-Goals_and_Challenges.html">
             
                     
                     Distributed Systems: Goals and Challenges
@@ -1167,9 +1167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.2" data-path="../lec18/Leases.html">
+        <li class="chapter " data-level="1.19.2" data-path="Leases.html">
             
-                <a href="../lec18/Leases.html">
+                <a href="Leases.html">
             
                     
                     Leases
@@ -1180,9 +1180,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.3" data-path="../lec18/dist-intro.html">
+        <li class="chapter " data-level="1.19.3" data-path="dist-intro.html">
             
-                <a href="../lec18/dist-intro.html">
+                <a href="dist-intro.html">
             
                     
                     Introduction to Distributed Systems
@@ -1193,9 +1193,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19.4" data-path="../lec18/security-distributed.html">
+        <li class="chapter active" data-level="1.19.4" data-path="security-distributed.html">
             
-                <a href="../lec18/security-distributed.html">
+                <a href="security-distributed.html">
             
                     
                     Security in Distributed Systems
@@ -1299,7 +1299,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Lecture 14: The Fast File System</a>
+        <a href="../.." >Security in Distributed Systems</a>
     </h1>
 </div>
 
@@ -1314,7 +1314,45 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="lecture-14-the-fast-file-system">Lecture 14: The Fast File System</h1>
+                                <h3 id="the-challenge-of-distributed-system-security">The Challenge of Distributed System Security</h3>
+<ul>
+<li><strong>Keywords:</strong> Distributed systems, security challenges, authentication, network communication.</li>
+<li><strong>Details:</strong> Emphasizes the inherent difficulties in securing distributed systems, where resources are spread across multiple machines that communicate over networks. It outlines two main problems: ensuring the security of other machines within the system and securing communication over untrustable networks.</li>
+</ul>
+<h3 id="the-role-of-authentication">The Role of Authentication</h3>
+<ul>
+<li><strong>Keywords:</strong> Authentication, trust, password, public key, private key.</li>
+<li><strong>Details:</strong> Discusses authentication as a fundamental strategy for verifying the identities of parties in a distributed system. It explains the reliance on knowledge-based authentication, primarily through passwords or cryptographic keys, to establish trust between entities.</li>
+</ul>
+<h3 id="public-key-authentication">Public Key Authentication</h3>
+<ul>
+<li><strong>Keywords:</strong> Public key infrastructure, certificates, Certificate Authorities (CAs), X.509.</li>
+<li><strong>Details:</strong> Details the use of public key authentication in distributed systems, highlighting the role of certificates and Certificate Authorities in validating public keys. The document explains how certificates are used to authenticate entities over the internet and the importance of ensuring a certificate truly belongs to the communicating partner.</li>
+</ul>
+<h3 id="password-authentication">Password Authentication</h3>
+<ul>
+<li><strong>Keywords:</strong> Passwords, network security, encryption, user ID.</li>
+<li><strong>Details:</strong> Addresses the use of passwords for authentication in scenarios where two parties need to establish trust. It discusses the encryption of passwords during transmission to prevent eavesdropping and the significance of using passwords in conjunction with user IDs for identity verification.</li>
+</ul>
+<h3 id="ssltls">SSL/TLS</h3>
+<ul>
+<li><strong>Keywords:</strong> SSL, TLS, encryption, secure communication, key exchange.</li>
+<li><strong>Details:</strong> Introduces SSL/TLS as a protocol for securing communication between processes over networks. It outlines the process of establishing an encrypted connection, including server authentication, symmetric key exchange, and the use of Diffie-Hellman key exchange and certificates for secure communication.</li>
+</ul>
+<h3 id="other-authentication-approaches">Other Authentication Approaches</h3>
+<ul>
+<li><strong>Keywords:</strong> Challenge/response protocols, authentication servers, Kerberos.</li>
+<li><strong>Details:</strong> Explores alternative authentication methods, including challenge/response protocols and authentication servers like Kerberos. These methods provide additional options for verifying identities and establishing trust within distributed systems.</li>
+</ul>
+<h3 id="higher-level-tools-https-and-ssh">Higher Level Tools: HTTPS and SSH</h3>
+<ul>
+<li><strong>Keywords:</strong> HTTPS, SSH, web security, secure shell, network encryption.</li>
+<li><strong>Details:</strong> Discusses higher-level tools for securing distributed systems, particularly HTTPS for securing web transactions and SSH for secure remote logins and encrypted communication. The document emphasizes the importance of these tools in ensuring secure and authenticated interactions over the internet.</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Keywords:</strong> Security strategies, authentication, encryption, distributed systems.</li>
+</ul>
 
                                 
                                 </section>
@@ -1342,12 +1380,12 @@
 
             
                 
-                <a href="../lec13/file-intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to File Systems">
+                <a href="dist-intro.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to Distributed Systems">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="file-ffs.html" class="navigation navigation-next " aria-label="Next page: The Fast File System (FFS)">
+                <a href="../lec19/" class="navigation navigation-next " aria-label="Next page: Lecture 19: Distributed File Systems">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1358,7 +1396,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lecture 14: The Fast File System","level":"1.15","depth":1,"next":{"title":"The Fast File System (FFS)","level":"1.15.1","depth":2,"path":"readings/lec14/file-ffs.md","ref":"readings/lec14/file-ffs.md","articles":[]},"previous":{"title":"Introduction to File Systems","level":"1.14.4","depth":2,"path":"readings/lec13/file-intro.md","ref":"readings/lec13/file-intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec14/README.md","mtime":"2024-03-04T06:05:41.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Security in Distributed Systems","level":"1.19.4","depth":2,"next":{"title":"Lecture 19: Distributed File Systems","level":"1.20","depth":1,"path":"readings/lec19/README.md","ref":"readings/lec19/README.md","articles":[{"title":"The Andrew File System (AFS)","level":"1.20.1","depth":2,"path":"readings/lec19/dist-afs.md","ref":"readings/lec19/dist-afs.md","articles":[]},{"title":"Network File System (NFS)","level":"1.20.2","depth":2,"path":"readings/lec19/dist-nfs.md","ref":"readings/lec19/dist-nfs.md","articles":[]}]},"previous":{"title":"Introduction to Distributed Systems","level":"1.19.3","depth":2,"path":"readings/lec18/dist-intro.md","ref":"readings/lec18/dist-intro.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"readings/lec18/security-distributed.md","mtime":"2024-03-12T12:55:46.539Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-22T16:16:21.401Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
